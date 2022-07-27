@@ -91,7 +91,7 @@ exports.detailAnime = async (req, res) => {
           genre_name = $(this).text();
           genre_id = $(this)
             .attr("href")
-            .replace(`https://otakudesu.info/genres/`, "");
+            .replace(`https://otakudesu.watch/genres/`, "");
           genre_link = $(this).attr("href");
           genreList.push({ genre_name, genre_id, genre_link });
           object.genre_list = genreList;
@@ -105,7 +105,7 @@ exports.detailAnime = async (req, res) => {
           id: $(element)
             .find("span > a")
             .attr("href")
-            .replace('https://otakudesu.info/', ""),
+            .replace('https://otakudesu.watch/', ""),
           link: $(element).find("span > a").attr("href"),
           uploaded_on: $(element).find(".zeebr").text(),
         };
@@ -128,7 +128,7 @@ exports.detailAnime = async (req, res) => {
         $("div.venser > div:nth-child(6) > ul").text().length !== 0
           ? $("div.venser > div:nth-child(6) > ul > li > span:nth-child(1) > a")
               .attr("href")
-              .replace(`https://otakudesu.info/batch/`, "")
+              .replace(`https://otakudesu.watch/batch/`, "")
           : "Masih kosong gan",
       link:
         $("div.venser > div:nth-child(6) > ul").text().length !== 0
